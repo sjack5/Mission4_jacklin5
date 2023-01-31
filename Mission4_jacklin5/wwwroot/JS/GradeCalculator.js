@@ -1,11 +1,13 @@
 ﻿/*/*document.getElementById("btnSend").addEventListener("click", function () {*/
 $("#btnSend").click(function () {
-    /*  var letterGrade;*/
+    var letterGrade;
 
+    /*Took value from form and multiplied it by weight. Added them altogether then divided by 100*/
     var overallGrade = (parseInt($("#Assignments").val() * 0.5) + parseInt($("#Project").val() * .1)
         + parseInt(($("#Quiz").val() * 0.1)) + parseInt(($("#Midterm").val() * 0.1))
         + parseInt(($("#Final").val() * 0.1)) + parseInt(($("#INTEX").val() * 0.1)))/100;
 
+    /*Took score from calculation and compared it to grade distribution on syllabus*/
     if (overallGrade >= 0.94) {
         letterGrade = 'A'
     }
@@ -43,5 +45,6 @@ $("#btnSend").click(function () {
         letterGrade = 'E'
     }
 
+    //Changes the final grade label to what your final score is
     $("#finalGrade").html(overallGrade + "% or " + letterGrade)
 })
