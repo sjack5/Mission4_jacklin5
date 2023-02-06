@@ -46,5 +46,6 @@ $("#btnSend").click(function () {
     }
 
     //Changes the final grade label to what your final score is
-    $("#finalGrade").html(overallGrade + "% or " + letterGrade)
+    //$("#finalGrade").html(overallGrade + "% or " + letterGrade)
+    alert(overallGrade + "% or " + letterGrade);
 })
