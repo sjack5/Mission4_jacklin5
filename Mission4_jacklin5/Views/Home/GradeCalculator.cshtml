@@ -6,26 +6,24 @@
 }
 
 @model GradeCalculatorModel;
-
 <!--Grade calculator from with ids so we can access them later-->
 <h2>Grade Calculator (Enter as a percentage)</h2>
 <form method="post">
     <label>Assignments:</label>
     <input id="Assignments" asp-for="Assignments" /><br />      <!--asp-for connects us to the model-->
     <label>Group Project:</label>
-    <input id="Project" asp-for="Project"/><br />
+    <input id="Project" asp-for="Project" /><br />
     <label>Quizzes:</label>
-    <input id="Quiz" asp-for="Quiz"/><br />
+    <input id="Quiz" asp-for="Quiz" /><br />
     <label>Midterm:</label>
-    <input id="Midterm" asp-for="Midterm"/><br />
+    <input id="Midterm" asp-for="Midterm" /><br />
     <label>Final Exam:</label>
-    <input id="Final" asp-for="Final"/><br />
+    <input id="Final" asp-for="Final" /><br />
     <label>INTEX:</label>
-    <input id="INTEX" asp-for="INTEX"/><br />
+    <input id="INTEX" asp-for="INTEX" /><br />
 
     <!--This will change later to your actual final grade-->
     <label id="finalGrade">Your final grade is...</label><br />
-
     <input id="btnSend" type="submit" value="Submit" />
 
     <div asp-validation-summary="All"></div>        <!--Send summary of which inputs are wrong when you hit submit-->
@@ -33,4 +31,6 @@
 
 <!--Gives us access to bootstrap, jquery, and javascript-->
 
+<script src="~/lib/BootStrap/js/bootstrap.min.js"></script>
+<script src="~/lib/jquery/jquery-3.6.3.min.js"></script>
 <script src="~/JS/GradeCalculator.js"></script>
