@@ -1,0 +1,39 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewData["Title"] = "Grade Calculator";
+}
+
+@model GradeCalculatorModel;
+
+<link href="lib/BootStrap/css/bootstrap.min.css" rel="stylesheet" />
+<link href="css/default.css" rel="stylesheet" />
+
+<!--Grade calculator from with ids so we can access them later-->
+<h2>Grade Calculator (Enter as a percentage)</h2>
+<form method="post">
+    <label>Assignments:</label>
+    <input id="Assignments" asp-for="Assignments" /><br />
+    <label>Group Project:</label>
+    <input id="Project" asp-for="Project"/><br />
+    <label>Quizzes:</label>
+    <input id="Quiz" asp-for="Quiz"/><br />
+    <label>Midterm:</label>
+    <input id="Midterm" asp-for="Midterm"/><br />
+    <label>Final Exam:</label>
+    <input id="Final" asp-for="Final"/><br />
+    <label>INTEX:</label>
+    <input id="INTEX" asp-for="INTEX"/><br />
+
+    <!--This will change later to your actual final grade-->
+    <label id="finalGrade">Your final grade is...</label><br />
+
+    <input id="btnSend" type="submit" value="Submit" />
+
+    <div asp-validation-summary="All"></div>
+</form>
+
+<!--Gives us access to bootstrap, jquery, and javascript-->
+
+<script src="~/JS/GradeCalculator.js"></script>
