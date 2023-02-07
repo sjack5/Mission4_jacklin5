@@ -8,7 +8,7 @@ namespace Mission4_jacklin5.Models
 {
     public class GradeCalculatorModel
     {
-        [Range(0, 100)]
+        [Range(0, 100)]         //Validates the data for me
         public byte Assignments { get; set; }
         public byte Project { get; set; }
         public byte Quiz { get; set; }

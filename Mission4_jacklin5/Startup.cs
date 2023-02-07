@@ -33,7 +33,7 @@ namespace Mission4_jacklin5
 
             app.UseEndpoints(endpoints =>
             {
-                endpoints.MapControllerRoute(
+                endpoints.MapControllerRoute(                   //Calls our index page as the default when we open the page
                     name: "default",
                     pattern: "{controller=Home}/{action=Index}/{id?}"
                     );
